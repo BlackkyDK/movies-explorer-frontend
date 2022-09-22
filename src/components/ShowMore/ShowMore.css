@@ -1,0 +1,25 @@
+.show-more {
+  padding: 50px 0 80px;
+  text-align: center;
+}
+
+.show-more__button {
+  width: 320px;
+  border: 1px solid #424242;
+  color: #fff;
+  background-color: transparent;
+  padding: 11px 0 9px;
+  border-radius: 6px;
+  opacity: 1;
+  transition: opacity 1s linear .3s;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  cursor: pointer;
+}
+
+.show-more__button:hover {
+  opacity: .7;
+}
+
