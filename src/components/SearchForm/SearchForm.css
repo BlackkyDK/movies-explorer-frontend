@@ -21,11 +21,24 @@
     padding: 0;
 }
 
-.search-form__img {
+.search-form__button {
   cursor: pointer;
-  width: 34px;
+  width: 38px;
   height: 34px;
   margin: 6px ;
+  background-image: url(../../images/find.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #2F2F2F;
+  border: none;
+  border-radius: 48px;
+  padding: 0;
+  opacity: 1;
+  transition: opacity 1s linear .3s;
+}
+
+.search-form__button:hover {
+  opacity: .7;
 }
 
 @media screen and (max-width: 1155px) {

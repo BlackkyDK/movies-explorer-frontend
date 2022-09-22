@@ -41,7 +41,7 @@
   align-self: flex-end;
 
   border: none;
-  background: transparent url("../../images/Group.png") center no-repeat;
+  background: transparent url("../../images/Group.svg") center no-repeat;
   opacity: 1;
   transition: opacity 1s linear .3s;
 }

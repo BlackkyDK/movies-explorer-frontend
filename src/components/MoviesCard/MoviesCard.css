@@ -3,10 +3,11 @@
   background: #222222;
   box-shadow: 0px 4px 30px rgb(0 0 0 / 8%);
   border-radius: 6px;
+  list-style: none;
 }
 
 .movies-card__text {
-  padding: 16px;
+  padding: 14px;
 }
 
 .movies-card__title {
@@ -42,6 +43,32 @@
   background-repeat: no-repeat;
   border: 0;
   cursor: pointer;
+  opacity: 1;
+  transition: opacity 1s linear .3s;
+}
+
+.movies-card__save:hover {
+  opacity: .7;
+}
+
+.movie-card__delete {
+  width: 30px;
+  height: 30px;
+  background-image: url(../../images/delete.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 1s linear .3s;
+}
+
+.movie-card__delete:hover {
+  opacity: .7;
+}
+
+.movie-card__delete-caption {
+  visibility: hidden;
 }
 
 @media screen and (max-width: 1145px) {

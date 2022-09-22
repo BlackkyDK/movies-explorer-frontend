@@ -36,6 +36,13 @@
   border-radius: 15px;
   position: relative;
   cursor: pointer;
+  opacity: 1;
+  transition: opacity 1s linear .3s;
+}
+
+.filter__pseudo-checkbox:hover {
+  opacity: .7;
+  cursor: pointer;
 }
 
 .filter__checkbox:checked + .filter__pseudo-checkbox {
