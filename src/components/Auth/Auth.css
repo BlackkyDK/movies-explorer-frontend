@@ -14,9 +14,9 @@
 
 @media screen and (max-width: 450px) {
   .auth-header {
-      text-align: center;
+    text-align: center;
   }
   .auth-header__title {
-      margin-top: 50px;
+    margin-top: 50px;
   }
 }

@@ -59,9 +59,18 @@
   margin-top: 220px;
   text-align: center;
 }
+.profile-form__span {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 20px;
+  display: block;
+}
 
 .profile-form__logout {
   color: #ee3465;
+  background-color: #202020;
+  border: none;
   margin: 16px 0 0;
   font-style: normal;
   font-weight: 500;

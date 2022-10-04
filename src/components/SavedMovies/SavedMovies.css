@@ -3,3 +3,13 @@
   max-width: 1140px;
   padding-top: 70px;
 }
+
+.saved-movies__text {
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 20px;
+  display: block;
+}
