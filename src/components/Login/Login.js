@@ -4,7 +4,7 @@ import Auth from "../Auth/Auth";
 import React from "react";
 import { useFormValidation } from "../../hooks/useFormValidation";
 
-function Login({ onLogin }) {
+function Login({ onLogin, isSending }) {
   const texts = {
     buttonText: "Войти",
     subText: "Ещё не зарегистрированы?",
@@ -15,7 +15,8 @@ function Login({ onLogin }) {
     titleText: "Рады видеть!",
   };
 
-  const { values, handleChange, errors } = useFormValidation();
+  const { values, handleChange, errors, isValid } = useFormValidation();
+  const isDisabled = !isValid || !isSending;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -48,7 +49,7 @@ function Login({ onLogin }) {
         ></input>
         <span className="form__input_error">{errors.password || ""}</span>
         <span className="form__input_feedback"></span>
-        <button type="submit" className="form__button form__button_register">
+        <button type="submit" disabled={isDisabled} className="form__button form__button_register">
           {texts.buttonText}
         </button>
       </form>

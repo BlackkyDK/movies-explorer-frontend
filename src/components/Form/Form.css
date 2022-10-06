@@ -42,9 +42,16 @@
   border-radius: 3px;
 }
 
+
 .form__button_register {
   padding: 13px 126px 15px 124px;
 }
+
+.form__button_register:disabled {
+  cursor: default;
+  color: #424242;
+}
+
 
 .form__text {
   font-weight: 400;
