@@ -4,6 +4,14 @@
   padding: 70px 0 70px;
 }
 
+.form__input_feedback {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   .register__main {
       padding: 232px 0 232px;

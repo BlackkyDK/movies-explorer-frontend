@@ -14,6 +14,8 @@ function Profile({ logoutProfile, onProfileEdit, requestStatus: { message } }) {
   const [requestStatusText, setRequestStatusText] = React.useState("");
   const [isDisabled, setDisabled] = React.useState(false);
   const { pathname } = useLocation();
+  // const [nameIsBlank, setNameIsBlank] = React.useState(true);
+  // const [emailIsBlank, setEmailIsBlank] = React.useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();

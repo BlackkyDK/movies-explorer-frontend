@@ -58,7 +58,14 @@
   padding: 0;
   margin-top: 220px;
   text-align: center;
+  cursor: pointer;
 }
+
+.profile-form__button:disabled {
+  cursor: default;
+  color: #424242;
+}
+
 .profile-form__span {
   font-weight: 400;
   font-size: 13px;
@@ -76,6 +83,7 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
