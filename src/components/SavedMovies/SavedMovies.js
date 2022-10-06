@@ -3,6 +3,7 @@ import "./SavedMovies.css";
 
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
+import { LENGTH_MIN } from "../../utils/constants";
 
 function SavedMovies({ cardsList, handleMovieDelete }) {
   const [filteredMovies, setFilteredMovies] = React.useState([]);
@@ -15,7 +16,7 @@ function SavedMovies({ cardsList, handleMovieDelete }) {
     let result;
 
     if (checkbox) {
-      moviesFilter = moviesFilter.filter((movie) => movie.duration <= 40);
+      moviesFilter = moviesFilter.filter((movie) => movie.duration <= LENGTH_MIN);
     }
 
     result = moviesFilter.filter((movie) => {

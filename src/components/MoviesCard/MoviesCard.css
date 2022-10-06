@@ -63,7 +63,7 @@
   opacity: .7;
 }
 
-.movie-card__delete {
+.movies-card__delete {
   width: 30px;
   height: 30px;
   background-image: url(../../images/delete.svg);
@@ -75,11 +75,11 @@
   transition: opacity 1s linear .3s;
 }
 
-.movie-card__delete:hover {
+.movies-card__delete:hover {
   opacity: .7;
 }
 
-.movie-card__delete-caption {
+.movies-card__delete-caption {
   visibility: hidden;
 }
 

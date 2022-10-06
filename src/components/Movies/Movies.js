@@ -5,6 +5,7 @@ import MoviesCardsList from "../MoviesCardList/MoviesCardList";
 import Preloader from "../Preloader/Preloader";
 import apiMovies from "../../utils/MoviesApi";
 import ShowMore from "../ShowMore/ShowMore";
+import { LENGTH_MIN } from "../../utils/constants";
 
 function Movies({
   movies,
@@ -33,7 +34,7 @@ function Movies({
     let result;
 
     if (checkbox) {
-      moviesFilter = moviesFilter.filter((movie) => movie.duration <= 40);
+      moviesFilter = moviesFilter.filter((movie) => movie.duration <= LENGTH_MIN);
     }
 
     result = moviesFilter.filter((movie) => {

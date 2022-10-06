@@ -34,11 +34,6 @@ function MoviesCard({ movie, cardsList, handleMovieSave, handleMovieDelete }) {
 
   return (
     <li className="movies-card">
-      <a
-        className="movies-card__link"
-        href={movie.trailerLink}
-        target="_blank"
-      ></a>
       <div className="movies-card__text">
         <div className="movies-card__container">
           <h2 className="movies-card__title">{movie.nameRU}</h2>
@@ -62,15 +57,22 @@ function MoviesCard({ movie, cardsList, handleMovieSave, handleMovieDelete }) {
       </div>
       <Switch>
         <Route path="/movies">
-          <img
-            src={
-              location.pathname === "/saved-movies"
-                ? `${movie.image}`
-                : `https://api.nomoreparties.co${movie.image.url}`
-            }
-            alt={movie.nameRU}
-            className="movies-card__image"
-          />
+          <a
+            className="movies-card__link"
+            href={movie.trailerLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={
+                location.pathname === "/saved-movies"
+                  ? `${movie.image}`
+                  : `https://api.nomoreparties.co${movie.image.url}`
+              }
+              alt={movie.nameRU}
+              className="movies-card__image"
+            />
+          </a>
         </Route>
         <Route path="/saved-movies">
           <img

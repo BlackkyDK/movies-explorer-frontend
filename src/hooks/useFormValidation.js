@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function validateEmail(email) {
-  var re = /\S+@\S+\.\S+/;
+  var re = /^[^ ]+@[^ ]+\.[a-z]{1,3}$/;
   return re.test(email);
 }
 
