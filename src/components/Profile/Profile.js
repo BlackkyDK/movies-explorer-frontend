@@ -76,7 +76,7 @@ function Profile({ logoutProfile, onProfileEdit, requestStatus: { message } }) {
             className="profile-form__input"
             name="name"
             onChange={handleUserName}
-            value={name || ""}
+            defaultValue={currentUser.name || ''}
             minLength="4"
             maxLength="40"
             autoComplete="off"
@@ -90,7 +90,7 @@ function Profile({ logoutProfile, onProfileEdit, requestStatus: { message } }) {
             name="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             onChange={handleUserEmail}
-            value={email || ""}
+            defaultValue={currentUser.email || ''}
             autoComplete="off"
             required
           ></input>
