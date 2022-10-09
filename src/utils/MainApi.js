@@ -62,7 +62,7 @@ class MainApi {
 
   getMovies() {
     return fetch(`${this._baseUrl}/movies`, {
-      // method: 'GET',
+      method: 'GET',
       headers: this._headers,
     }).then(this._checkResponse);
   }
@@ -119,8 +119,8 @@ class MainApi {
 }
 
 const api = new MainApi({
-  baseUrl: 'https://api.klementeva.nomoredomains.sbs',
-  // baseUrl: "http://localhost:3000",
+  // baseUrl: 'https://api.klementeva.nomoredomains.sbs',
+  baseUrl: "http://localhost:3000",
 });
 
 export default api;

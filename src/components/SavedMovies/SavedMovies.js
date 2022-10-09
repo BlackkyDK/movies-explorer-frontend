@@ -8,7 +8,7 @@ import { LENGTH_MIN } from "../../utils/constants";
 function SavedMovies({ cardsList, handleMovieDelete }) {
   const [filteredMovies, setFilteredMovies] = React.useState([]);
   const [isSearchDone, setIsSearchDone] = React.useState(false);
-
+  // const [moviesToRender, setMoviesToRender] = React.useState([]);
   const [query, setQuery] = React.useState("");
   const [checkbox, setCheckbox] = React.useState(false);
   function moviesFilter(movies, query, checkbox) {
@@ -26,6 +26,7 @@ function SavedMovies({ cardsList, handleMovieDelete }) {
   }
 
   function handleSearch(query, checkbox) {
+    // setMoviesToRender([]);
     setQuery(query);
     setCheckbox(checkbox);
     const searchResult = moviesFilter(cardsList, query, checkbox);
@@ -40,9 +41,19 @@ function SavedMovies({ cardsList, handleMovieDelete }) {
     }
   }, [cardsList]);
 
+  // React.useEffect(() => {
+  //   if (filteredMovies) {
+  //     setQuery(filteredMovies.query);
+  //     moviesFilter(filteredMovies.moviesFilter);
+  //   }
+  // }, [filteredMovies]);
   return (
     <div className="saved-movies">
-      <SearchForm onSearchMovies={handleSearch} />
+      <SearchForm onSearchMovies={handleSearch}
+      // checkbox={checkbox}
+      // query={query}
+      // setQuery={setQuery}
+      />
       {isSearchDone ? (
         filteredMovies.length > 0 ? (
           <MoviesCardList

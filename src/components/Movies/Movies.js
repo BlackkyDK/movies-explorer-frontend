@@ -14,8 +14,9 @@ function Movies({
   savedMoviesUser,
   cardsList,
 }) {
-  const [query, setQuery] = React.useState("");
-  const [checkbox, setCheckbox] = React.useState(false);
+  // const [query, setQuery] = React.useState("");
+  const [query, setQuery] = React.useState(getSearchStoreValue());
+  const [checkbox, setCheckbox] = React.useState(JSON.parse(localStorage.getItem('checkBox')) || false);
 
   const [initialMovies, setInitialMovies] = React.useState([]);
   const [moviesToRender, setMoviesToRender] = React.useState([]);
@@ -29,19 +30,39 @@ function Movies({
   const [moreResultsNumber, setMoreResultsNumber] = React.useState(0);
   const currentViewport = document.documentElement.clientWidth;
   const [isMoreButtonVisible, setIsMoreButtonVisible] = React.useState(false);
+
   function moviesFilter(movies, query, checkbox) {
-    let moviesFilter = movies;
-    let result;
+  //   let moviesFilter = movies;
+  //   let result;
 
-    if (checkbox) {
-      moviesFilter = moviesFilter.filter((movie) => movie.duration <= LENGTH_MIN);
+  //   if (checkbox) {
+  //     moviesFilter = moviesFilter.filter((movie) => movie.duration <= LENGTH_MIN);
+  //   }
+
+  //   result = moviesFilter.filter((movie) => {
+  //     return movie.nameRU.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+  //   });
+  //   return result;
+  // }
+  return movies.filter((movieCard) => {
+    if (checkbox === false) {
+        return movieCard.nameRU.toLowerCase().includes(query.toLowerCase())
     }
+    if (checkbox === true) {
+        return movieCard.nameRU.toLowerCase().includes(query.toLowerCase()) && movieCard.duration <= LENGTH_MIN
+    }
+});
+}
 
-    result = moviesFilter.filter((movie) => {
-      return movie.nameRU.toLowerCase().indexOf(query.toLowerCase()) !== -1;
-    });
-    return result;
+
+function getSearchStoreValue() {
+  const searchStoreValue = localStorage.getItem('filmSearch');
+  if (!searchStoreValue) {
+      return '';
   }
+  return searchStoreValue;
+}
+
   React.useEffect(() => {
     if (localStorage.getItem("searchResults")) {
       const init = JSON.parse(localStorage.getItem("searchResults"));

@@ -55,6 +55,7 @@ function SearchForm({ onSearchMovies }) {
           placeholder="Фильм"
           className="search-form__input"
           id="queryInput"
+          autoFocus
           value={query || ""}
           onChange={handleQueryChange}
           required

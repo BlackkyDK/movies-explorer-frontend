@@ -75,11 +75,18 @@ function MoviesCard({ movie, cardsList, handleMovieSave, handleMovieDelete }) {
           </a>
         </Route>
         <Route path="/saved-movies">
+        <a
+            className="movies-card__link"
+            href={movie.trailerLink}
+            target="_blank"
+            rel="noreferrer"
+          >
           <img
             className="movies-card__image"
             src={movie.image}
             alt={movie.nameRU}
-          />
+            />
+          </a>
         </Route>
       </Switch>
     </li>

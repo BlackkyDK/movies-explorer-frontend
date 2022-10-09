@@ -183,14 +183,17 @@ function App() {
 
   const handleSignOut = () => {
     setLoggedIn(false);
-    localStorage.removeItem("jwt");
-    localStorage.removeItem("initialMovies");
-    localStorage.removeItem("query");
-    localStorage.removeItem("checkboxStatus");
-    localStorage.removeItem("searchResults");
+    localStorage.clear();
+    // localStorage.removeItem("jwt");
+    // localStorage.removeItem("initialMovies");
+    // localStorage.removeItem("query");
+    // localStorage.removeItem("checkbox");
+    // localStorage.removeItem("searchResults");
+    setCurrentUser("");
     setLoginStatus({});
     setRegisterStatus({});
     setProfileStatus({});
+    setSavedMoviesUser(null);
     history.push("/");
   };
 
