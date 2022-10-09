@@ -119,8 +119,8 @@ class MainApi {
 }
 
 const api = new MainApi({
-  // baseUrl: 'https://api.klementeva.nomoredomains.sbs',
-  baseUrl: "http://localhost:3000",
+  baseUrl: 'https://api.klementeva.nomoredomains.sbs',
+  // baseUrl: "http://localhost:3000",
 });
 
 export default api;
