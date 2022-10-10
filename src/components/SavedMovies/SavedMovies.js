@@ -9,8 +9,8 @@ function SavedMovies({ cardsList, handleMovieDelete }) {
   const [filteredMovies, setFilteredMovies] = React.useState([]);
   const [isSearchDone, setIsSearchDone] = React.useState(false);
   // const [moviesToRender, setMoviesToRender] = React.useState([]);
-  const [query, setQuery] = React.useState("");
-  const [checkbox, setCheckbox] = React.useState(false);
+  const [query, setQuery] = React.useState(getSearchStoreValue());
+  const [checkbox, setCheckbox] = React.useState(JSON.parse(localStorage.getItem('checkBox')) || false);
   function moviesFilter(movies, query, checkbox) {
     let moviesFilter = movies;
     let result;
@@ -34,6 +34,14 @@ function SavedMovies({ cardsList, handleMovieDelete }) {
     setIsSearchDone(true);
   }
 
+  function getSearchStoreValue() {
+    const searchStoreValue = localStorage.getItem('filmSearch');
+    if (!searchStoreValue) {
+        return '';
+    }
+    return searchStoreValue;
+}
+
   React.useEffect(() => {
     if (filteredMovies.length > 0) {
       const searchResult = moviesFilter(cardsList, query, checkbox);
@@ -50,9 +58,9 @@ function SavedMovies({ cardsList, handleMovieDelete }) {
   return (
     <div className="saved-movies">
       <SearchForm onSearchMovies={handleSearch}
-      // checkbox={checkbox}
-      // query={query}
-      // setQuery={setQuery}
+      checkbox={checkbox}
+      query={query}
+      setQuery={setQuery}
       />
       {isSearchDone ? (
         filteredMovies.length > 0 ? (

@@ -32,28 +32,18 @@ function Movies({
   const [isMoreButtonVisible, setIsMoreButtonVisible] = React.useState(false);
 
   function moviesFilter(movies, query, checkbox) {
-  //   let moviesFilter = movies;
-  //   let result;
+    let moviesFilter = movies;
+    let result;
 
-  //   if (checkbox) {
-  //     moviesFilter = moviesFilter.filter((movie) => movie.duration <= LENGTH_MIN);
-  //   }
-
-  //   result = moviesFilter.filter((movie) => {
-  //     return movie.nameRU.toLowerCase().indexOf(query.toLowerCase()) !== -1;
-  //   });
-  //   return result;
-  // }
-  return movies.filter((movieCard) => {
-    if (checkbox === false) {
-        return movieCard.nameRU.toLowerCase().includes(query.toLowerCase())
+    if (checkbox) {
+      moviesFilter = moviesFilter.filter((movie) => movie.duration <= LENGTH_MIN);
     }
-    if (checkbox === true) {
-        return movieCard.nameRU.toLowerCase().includes(query.toLowerCase()) && movieCard.duration <= LENGTH_MIN
-    }
-});
-}
 
+    result = moviesFilter.filter((movie) => {
+      return movie.nameRU.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+    });
+    return result;
+  }
 
 function getSearchStoreValue() {
   const searchStoreValue = localStorage.getItem('filmSearch');

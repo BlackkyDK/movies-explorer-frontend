@@ -47,7 +47,7 @@ function SearchForm({ onSearchMovies }) {
       const input = document.getElementById("queryInput");
       input.setCustomValidity("Нужно ввести ключевое слово");
     }
-  }, [query]);
+  }, [query])
   return (
     <form className="search-form" onSubmit={handleSubmit}>
       <div className="search-form__container">
