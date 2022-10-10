@@ -11,7 +11,7 @@
   font-size: 13px;
   line-height: 15.73px;
   text-align: center;
-  color: #8B8B8B;
+  color: #8b8b8b;
   margin: 0;
   border-bottom: 1px solid #424242;
   padding-bottom: 20px;
@@ -56,33 +56,33 @@
 
 @media screen and (max-width: 768px) {
   .footer {
-      padding: 79px 30px 20px;
+    padding: 79px 30px 20px;
   }
 }
 
 @media screen and (max-width: 400px) {
   .footer {
-      padding: 79px 10px 10px;
+    padding: 79px 10px 10px;
   }
   .footer__title {
-      font-size: 12px;
-      line-height: 15px;
+    font-size: 12px;
+    line-height: 15px;
   }
   .footer__columns {
-      flex-direction: column-reverse;
-      text-align: center;
+    flex-direction: column-reverse;
+    text-align: center;
   }
   .footer__column-list {
-      display: block;
+    display: block;
   }
   .footer__copyright {
     max-width: 111px;
     margin: 30px auto 0;
     display: block;
-    color: #8B8B8B;
+    color: #8b8b8b;
   }
   .footer__column-list_item {
-      margin: 0;
-      margin-bottom: 12px;
+    margin: 0;
+    margin-bottom: 12px;
   }
 }

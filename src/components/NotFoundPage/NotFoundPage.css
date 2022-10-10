@@ -1,5 +1,5 @@
 .page-notfound {
-  color: #FFF;
+  color: #fff;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -32,37 +32,39 @@
 .page-notfound__back {
   margin: 184px 0 0;
   text-align: center;
-  color: #4285F4;
+  color: #4285f4;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   cursor: pointer;
+  border-style: none;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 768px) {
   .page-notfound {
-      padding-top: 408px;
-      padding-bottom: 222px;
+    padding-top: 408px;
+    padding-bottom: 222px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .page-notfound {
-      padding-top: 329px;
-      padding-bottom: 30px;
+    padding-top: 329px;
+    padding-bottom: 30px;
   }
   .page-notfound__title {
-      font-size: 80px;
-      line-height: 97px;
+    font-size: 80px;
+    line-height: 97px;
   }
   .page-notfound__subtitle {
-      font-size: 12px;
-      line-height: 15px;
+    font-size: 12px;
+    line-height: 15px;
   }
   .page-notfound__back {
-      font-size: 12px;
-      line-height: 15px;
-      margin-top: 284px;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 284px;
   }
 }

@@ -35,10 +35,22 @@
   align-items: center;
 }
 
-.movies-card__save {
+.movies-card__save_on {
   width: 30px;
   height: 30px;
   background-image: url(../../images/save9.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 1s linear .3s;
+}
+
+.movies-card__save_off {
+  width: 30px;
+  height: 30px;
+  background-image: url(../../images/save9d.svg);
   background-color: transparent;
   background-repeat: no-repeat;
   border: 0;
@@ -51,7 +63,7 @@
   opacity: .7;
 }
 
-.movie-card__delete {
+.movies-card__delete {
   width: 30px;
   height: 30px;
   background-image: url(../../images/delete.svg);
@@ -63,12 +75,17 @@
   transition: opacity 1s linear .3s;
 }
 
-.movie-card__delete:hover {
+.movies-card__delete:hover {
   opacity: .7;
 }
 
-.movie-card__delete-caption {
+.movies-card__delete-caption {
   visibility: hidden;
+}
+
+.movies-card__image {
+  width: 364px;
+  height: 203px;
 }
 
 @media screen and (max-width: 1145px) {
@@ -79,7 +96,8 @@
     display: block;
   }
   .movies-card__image {
-      width: 339px;
+    width: 339px;
+    height: 190px;
   }
 }
 
@@ -91,6 +109,7 @@
     display: block;
   }
   .movies-card__image {
-      width: 300px;
+      width: 290px;
+      height: 168px;
   }
 }

@@ -3,16 +3,22 @@
   margin: 0 auto;
   padding: 70px 0 70px;
 }
-
+.form__input_error {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
 @media screen and (max-width: 768px) {
   .login__main {
-      padding: 232px 0 232px;
+    padding: 232px 0 232px;
   }
 }
 
 @media screen and (max-width: 450px) {
   .login__main {
-      padding: 56px 0 30px;
-      max-width: 260px;
+    padding: 56px 0 30px;
+    max-width: 260px;
   }
 }
